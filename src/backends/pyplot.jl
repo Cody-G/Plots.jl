@@ -778,6 +778,7 @@ function py_add_series(plt::Plot{PyPlotBackend}, series::Series)
             cmap = py_fillcolormap(series),
             alpha = series[:fillalpha],
             # edgecolors = (series[:linewidth] > 0 ? py_linecolor(series) : "face"),
+            rasterized=true,
             extrakw...
         )
         push!(handles, handle)
